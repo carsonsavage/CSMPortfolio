@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Mail, Phone, Linkedin, ChevronDown, Briefcase, GraduationCap, Award, TrendingUp, Users, Target, Code, Sparkles } from 'lucide-react';
+import { Mail, Phone, Linkedin, ChevronDown, Briefcase, GraduationCap, Award, TrendingUp, Users, Target, Code, Spar} from 'lucide-react';
+import profileImage from './IMG_2587.JPG';
 
 export default function Portfolio() {
   const [activeSection, setActiveSection] = useState('home');
@@ -189,10 +190,18 @@ export default function Portfolio() {
               
               <div className="relative z-10 text-center">
                 {/* Profile Circle */}
-                <div className="w-52 h-52 mx-auto mb-8 rounded-full overflow-hidden border-8 border-white shadow-2xl bg-gradient-to-br from-amber-200 to-rose-200 flex items-center justify-center relative group">
-                  <div className="absolute inset-0 bg-gradient-to-br from-rose-500/20 to-orange-500/20 group-hover:scale-110 transition-transform duration-300"></div>
-                  <span className="text-8xl font-black bg-gradient-to-br from-rose-600 via-orange-500 to-amber-600 bg-clip-text text-transparent relative z-10" style={{ fontFamily: 'Impact, sans-serif' }}>CS</span>
-                  <Sparkles className="absolute top-4 right-4 w-6 h-6 text-amber-400 animate-pulse" />
+                <div className="w-52 h-52 mx-auto mb-8 rounded-full overflow-hidden border-8 border-white shadow-2xl relative group">
+                  {/* Profile Image */}
+                  <img 
+                    src={profileImage}
+                    alt="Carson Savage"
+                    className="w-full h-full object-cover group-hover:opacity-0 transition-opacity duration-300"
+                  />
+                  {/* CS Logo on Hover */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-amber-200 to-rose-200 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="absolute inset-0 bg-gradient-to-br from-rose-500/20 to-orange-500/20"></div>
+                    <span className="text-8xl font-black bg-gradient-to-br from-rose-600 via-orange-500 to-amber-600 bg-clip-text text-transparent relative z-10" style={{ fontFamily: 'Impact, sans-serif' }}>CS</span>
+                  </div>
                 </div>
                 
                 <h2 className="text-5xl font-black text-gray-900 mb-4 tracking-tight" style={{ fontFamily: 'system-ui, -apple-system, sans-serif', letterSpacing: '-0.03em' }}>
