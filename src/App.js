@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Mail, Phone, Linkedin, ChevronDown, Briefcase, GraduationCap, Award, TrendingUp, Users, Target, Code, Spar} from 'lucide-react';
-import profileImage from './IMG_2587.JPG';
+import profileImage from './IMG_2587.png';
 
 export default function Portfolio() {
   const [activeSection, setActiveSection] = useState('home');
@@ -195,7 +195,7 @@ export default function Portfolio() {
                   <img 
                     src={profileImage}
                     alt="Carson Savage"
-                    className="w-full h-full object-cover group-hover:opacity-0 transition-opacity duration-300"
+                    className="w-full h-full object-cover object-center group-hover:opacity-0 transition-opacity duration-300"
                   />
                   {/* CS Logo on Hover */}
                   <div className="absolute inset-0 bg-gradient-to-br from-amber-200 to-rose-200 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
