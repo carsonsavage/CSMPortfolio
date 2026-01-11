@@ -204,11 +204,23 @@ export default function Portfolio() {
                   </div>
                 </div>
                 
-                <h2 className="text-5xl font-black text-gray-900 mb-4 tracking-tight" style={{ fontFamily: 'system-ui, -apple-system, sans-serif', letterSpacing: '-0.03em' }}>
-                  <span className="block bg-gradient-to-r from-rose-600 via-orange-500 to-amber-600 bg-clip-text text-transparent">
-                    CUSTOMER SUCCESS MANAGER
-                  </span>
-                </h2>
+                <div className="mb-6">
+                  <h2 className="text-5xl font-black mb-3 tracking-tight" style={{ fontFamily: 'system-ui, -apple-system, sans-serif', letterSpacing: '-0.03em' }}>
+                    <span className="bg-gradient-to-r from-rose-600 via-orange-500 to-amber-600 bg-clip-text text-transparent">
+                      CARSON
+                    </span>
+                    <span className="block bg-gradient-to-r from-amber-600 via-orange-500 to-rose-600 bg-clip-text text-transparent">
+                      SAVAGE
+                    </span>
+                  </h2>
+                  <div className="flex items-center justify-center gap-3 mb-2">
+                    <div className="h-1 w-12 bg-gradient-to-r from-rose-500 to-orange-500 rounded-full"></div>
+                    <p className="text-2xl font-bold text-gray-800 tracking-wide">
+                      Customer Success Manager
+                    </p>
+                    <div className="h-1 w-12 bg-gradient-to-r from-orange-500 to-amber-500 rounded-full"></div>
+                  </div>
+                </div>
                 
                 <div className="flex items-center justify-center gap-4 mb-6 flex-wrap">
                   <span className="px-4 py-2 bg-gradient-to-r from-rose-100 to-orange-100 rounded-full text-rose-700 font-bold text-sm border-2 border-rose-300">
