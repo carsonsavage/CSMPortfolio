@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/CSMPortfolio/static/css/main.4254a793.css",
-    "main.js": "/CSMPortfolio/static/js/main.3fa67a85.js",
+    "main.css": "/CSMPortfolio/static/css/main.150529c4.css",
+    "main.js": "/CSMPortfolio/static/js/main.faea4455.js",
     "static/js/453.15a626a8.chunk.js": "/CSMPortfolio/static/js/453.15a626a8.chunk.js",
+    "static/media/IMG_2587.JPG": "/CSMPortfolio/static/media/IMG_2587.5b2c1b0835fd33e6918e.JPG",
     "index.html": "/CSMPortfolio/index.html",
-    "main.4254a793.css.map": "/CSMPortfolio/static/css/main.4254a793.css.map",
-    "main.3fa67a85.js.map": "/CSMPortfolio/static/js/main.3fa67a85.js.map",
+    "main.150529c4.css.map": "/CSMPortfolio/static/css/main.150529c4.css.map",
+    "main.faea4455.js.map": "/CSMPortfolio/static/js/main.faea4455.js.map",
     "453.15a626a8.chunk.js.map": "/CSMPortfolio/static/js/453.15a626a8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4254a793.css",
-    "static/js/main.3fa67a85.js"
+    "static/css/main.150529c4.css",
+    "static/js/main.faea4455.js"
   ]
 }
