@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Mail, Phone, Linkedin, ChevronDown, Briefcase, GraduationCap, Award, TrendingUp, Users, Target, Code} from 'lucide-react';
 import profileImage from './IMG_2587.png';
+import asherImage from './asher.png';
 
 export default function Portfolio() {
   const [activeSection, setActiveSection] = useState('home');
@@ -201,7 +202,7 @@ export default function Portfolio() {
                   <img 
                     src={profileImage}
                     alt="Carson Savage"
-                    className="w-full h-full object-cover object-center group-hover:opacity-0 transition-opacity duration-300"
+                    className="w-full h-full object-cover group-hover:opacity-0 transition-opacity duration-300"
                   />
                   {/* CS Logo on Hover */}
                   <div className="absolute inset-0 bg-gradient-to-br from-amber-200 to-rose-200 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -210,23 +211,11 @@ export default function Portfolio() {
                   </div>
                 </div>
                 
-                <div className="mb-6">
-                  <h2 className="text-5xl font-black mb-3 tracking-tight" style={{ fontFamily: 'system-ui, -apple-system, sans-serif', letterSpacing: '-0.03em' }}>
-                    <span className="bg-gradient-to-r from-rose-600 via-orange-500 to-amber-600 bg-clip-text text-transparent">
-                      CARSON
-                    </span>
-                    <span className="block bg-gradient-to-r from-amber-600 via-orange-500 to-rose-600 bg-clip-text text-transparent">
-                      SAVAGE
-                    </span>
-                  </h2>
-                  <div className="flex items-center justify-center gap-3 mb-2">
-                    <div className="h-1 w-12 bg-gradient-to-r from-rose-500 to-orange-500 rounded-full"></div>
-                    <p className="text-2xl font-bold text-gray-800 tracking-wide">
-                      Customer Success Manager
-                    </p>
-                    <div className="h-1 w-12 bg-gradient-to-r from-orange-500 to-amber-500 rounded-full"></div>
-                  </div>
-                </div>
+                <h2 className="text-5xl font-black text-gray-900 mb-4 tracking-tight" style={{ fontFamily: 'system-ui, -apple-system, sans-serif', letterSpacing: '-0.03em' }}>
+                  <span className="block bg-gradient-to-r from-rose-600 via-orange-500 to-amber-600 bg-clip-text text-transparent">
+                    CUSTOMER SUCCESS MANAGER
+                  </span>
+                </h2>
                 
                 <div className="flex items-center justify-center gap-4 mb-6 flex-wrap">
                   <span className="px-4 py-2 bg-gradient-to-r from-rose-100 to-orange-100 rounded-full text-rose-700 font-bold text-sm border-2 border-rose-300">
@@ -246,6 +235,23 @@ export default function Portfolio() {
                   HubSpot, Gainsight, and SQL. I'm at my best when solving tough problems, scaling relationships, 
                   and helping customers see the value they signed up for.
                 </p>
+                
+                <div className="mt-6 max-w-2xl mx-auto p-4 bg-white/60 rounded-2xl border-2 border-amber-200 flex items-center gap-4">
+                  <div className="flex-shrink-0">
+                    <div className="w-20 h-20 rounded-full overflow-hidden border-3 border-orange-300 shadow-lg">
+                    <img 
+                      src={asherImage}
+                      alt="Asher"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+              <p className="text-gray-700 leading-relaxed text-left flex-grow">
+                When I'm not optimizing customer journeys, you'll find me exploring new restaurants, getting lost in a good book, 
+                or playing video games. I'm also a proud dog mom to Asher, my Siberian Husky mix who keeps me on my toes. 
+                I love traveling and discovering new places and I'm always up for the next adventure!
+              </p>
+              </div>
               </div>
             </div>
           </div>
@@ -331,7 +337,7 @@ export default function Portfolio() {
                     {expandedJob === idx ? 'Hide' : 'Show'} Key Achievements
                     <ChevronDown className={`w-5 h-5 transition-transform group-hover/btn:translate-y-1 ${expandedJob === idx ? 'rotate-180' : ''}`} />
                   </button>
-                  
+
                   {expandedJob === idx && (
                     <ul className="space-y-3 mt-4">
                       {job.achievements.map((achievement, i) => (
