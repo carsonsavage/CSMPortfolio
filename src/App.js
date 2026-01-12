@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Mail, Phone, Linkedin, ChevronDown, Briefcase, GraduationCap, Award, TrendingUp, Users, Target, Code, Spar} from 'lucide-react';
+import { Mail, Phone, Linkedin, ChevronDown, Briefcase, GraduationCap, Award, TrendingUp, Users, Target, Code} from 'lucide-react';
 import profileImage from './IMG_2587.png';
 
 export default function Portfolio() {
@@ -29,12 +29,13 @@ export default function Portfolio() {
     { icon: Target, label: 'Portfolio Value', value: '$20M+' }
   ];
 
-  const experience = [
+    const experience = [
     {
       company: 'InvestiNet, LLC',
       location: 'Greenville, SC',
       role: 'Client Services Performance Manager',
       period: 'June 2025 - Present',
+      context: 'FinTech SaaS platform providing debt collection and recovery solutions for asset managers, private credit funds, and financial services firms.',
       achievements: [
         'Manage portfolio of 5 high-value financial services clients representing $20M+ in annual portfolio value',
         'Partner with leadership using SQL and HubSpot dashboards, contributing to 30% projected revenue increase',
@@ -47,6 +48,7 @@ export default function Portfolio() {
       location: 'Remote',
       role: 'Customer Experience Lead Coordinator',
       period: 'October 2023 - June 2025',
+      context: 'E-commerce and consumer SaaS platform for personalized photo products, serving over 100K active customers in the creative and consumer goods space.',
       achievements: [
         'Led remote CX team of 3 supporting 100K+ active customers, improving CSAT from 88% to 95%',
         'Sustained NPS of 96 through proactive customer engagement',
@@ -59,6 +61,7 @@ export default function Portfolio() {
       location: 'Remote',
       role: 'Principal Customer Success Manager',
       period: 'April 2022 - September 2023',
+      context: 'Public Safety B2B SaaS API platform integrating emergency response services into consumer apps, serving enterprise tech clients pre-acquisition by Alarm.com.',
       achievements: [
         'Built Customer Success function from zero, serving 40+ SaaS API clients representing $3M ARR',
         'Achieved 128% NRR through strategic account management',
@@ -71,6 +74,7 @@ export default function Portfolio() {
       location: 'Remote',
       role: 'Customer Success Manager',
       period: 'February 2021 - April 2022',
+      context: 'EdTech B2B SaaS platform providing real-time audience engagement and polling solutions for higher education institutions and enterprise clients.',
       achievements: [
         'Managed 140 educational SaaS accounts representing $800K ARR',
         'Achieved 124% net revenue expansion',
@@ -83,6 +87,7 @@ export default function Portfolio() {
       location: 'South Florida',
       role: 'Account Manager',
       period: '2019 - 2021',
+      context: 'Enterprise technology and infrastructure provider, managing B2B sales of hybrid cloud, cybersecurity, and IT infrastructure solutions.',
       achievements: [
         'Achieved 144% quota attainment through strategic territory management',
         'Drove market share growth in South Florida territory through hybrid cloud and client solutions',
@@ -96,6 +101,7 @@ export default function Portfolio() {
       location: 'Southeast Region',
       role: 'Retail Sales Consultant',
       period: '2017 - 2019',
+      context: 'Telecommunications and consumer services provider, delivering B2C sales for wireless, fiber internet, and entertainment solutions.',
       achievements: [
         'Ranked in top 10% of sales representatives nationwide',
         'Recognized in top five regionally for quarterly performance',
@@ -282,7 +288,7 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Experience Section */}
+       {/* Experience Section */}
       <section id="experience" className="py-20 px-6 bg-white/70 backdrop-blur-sm relative">
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="flex items-center gap-4 mb-12">
@@ -313,6 +319,11 @@ export default function Portfolio() {
                     </span>
                   </div>
                   
+                  {/* Company Context */}
+                  <div className="mb-4 p-4 bg-white/60 rounded-xl border-l-4 border-orange-400">
+                    <p className="text-gray-700 font-medium italic">{job.context}</p>
+                  </div>
+                  
                   <button
                     onClick={() => setExpandedJob(expandedJob === idx ? null : idx)}
                     className="text-rose-600 font-bold mb-3 hover:text-orange-600 flex items-center gap-2 group/btn"
@@ -320,7 +331,7 @@ export default function Portfolio() {
                     {expandedJob === idx ? 'Hide' : 'Show'} Key Achievements
                     <ChevronDown className={`w-5 h-5 transition-transform group-hover/btn:translate-y-1 ${expandedJob === idx ? 'rotate-180' : ''}`} />
                   </button>
-
+                  
                   {expandedJob === idx && (
                     <ul className="space-y-3 mt-4">
                       {job.achievements.map((achievement, i) => (
